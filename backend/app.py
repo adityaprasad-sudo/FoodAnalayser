@@ -115,6 +115,6 @@ async def analyze_food(image: UploadFile = File(...), api_key: str = Form(...)):
                 raise HTTPException(status_code=500, detail="criticalchiggiset eror An error occurred while processing the image.")
 if __name__ == "__main__":
        uvicorn.run(app, host="0.0.0.0", port=7860)
-
+#idk what the hell why isnt this wokin dude i am crying i have been working on this for 2 days straight and it just wont work i am so sad and tired and i just wanna sleep but i also wanna fix this code so bad but it just keeps giving me errors and i dont know what to do anymore please help me i am begging you please help me fix this code i am so desperate and sad right now please please please help me fix this code i am crying so much right now please help me fix this code i am begging you please help me fix this code i am so sad and tired and i just wanna sleep but i also wanna fix this code so bad but it just keeps giving me errors and i dont know what to do anymore please help me i am begging you please help me fix this code i am so desperate and sad right now please please please help me fix this code i am crying so much right now please help me fix this code
 
 
