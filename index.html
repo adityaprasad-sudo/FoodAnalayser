@@ -4,20 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingredient Analyser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Ingredient Analyser</h1>
-        <p>Upload a photo of your food's ingredient list to analyse its components.</p>
-    </header>
-    <main>
-        <div class="upload-section">
-            <input type="file" id="imageInput" accept="image/*">
-            <label for="imageInput" class="upload-label">Choose an image</label>
-            <button id="analyseButton">Analyse Ingredients</button>
+    <div class="background-decor pattern-top"></div>
+
+    <nav class="navbar">
+        <div class="logo-icon">🍽️</div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Chemical Database</a></li>
+        <li><a href="#">how it works</a></li>
+        <li><a href="#" class="highlight-link">💛 Support us(donate!)</a></li>
+        </ul>
+    </nav>
+<main class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Decode Your Food.</h1>
+            <p>Discover the hidden secrets of your food and analyse it for allergies and health benefits.<br>Powered by AI and Regulatory Science</p>
+            <div class="button-group">
+                <button class="primary-btn">Scan Barcode</button>
+                <input type="file" id="imageinput" accept="image/*" hidden>
+                <label for="imageinput" class="secondary-btn">Upload Ingredient Image(often at the backside of package)</label>
+            </div>
         </div>
-        <div class="preview-section" id="previewsection" style="display: none;">
-            <img id="imagePreview" src="#" alt="food Preview">
-            <button id="analysebut" class="analyse-but">Analyse Food</button>
+        <div class="herovisual">
+            <div class="floatinguicard topcard">
+                <div class="uirow">
+                    <span class="icon"></span>
+                    <div>
+                        <strong>Additives: 3</strong>
+                        <span>(INS 211, INS 621, E300)</span>
+                    </div>
+                </div>
+                <div class="uirow">
+                    <span class="icon"></span>
+                    <div>
+                        <strong>Hidden Sugars: 1</strong>
+                        <span>High (25g)</span>
+                    </div>
+                </div>
         </div>
+    </section>
+</main>
+        
