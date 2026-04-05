@@ -11,7 +11,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -20,18 +20,17 @@ body {
     overflow-x: hidden;
 }
 
-.backgrounddecor{
+/* Background Pattern (simulating the faint chemical bonds in the background) */
+.background-decor {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-image: radial-gradient(#d1eadd 1px, transparent 1px);
     background-size: 40px 40px;
     opacity: 0.4;
     z-index: -1;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -41,40 +40,47 @@ body {
     margin: 0 auto;
 }
 
-.logoicon {
+.logo-icon {
     background: var(--primary-green);
     color: white;
     padding: 10px;
     border-radius: 8px;
-    font-weight: 1.5rem;
+    font-size: 1.5rem;
 }
 
-.navlinks {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 325px;
+    gap: 25px;
 }
 
-.navlinks  a {
+.nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
     font-size: 0.9rem;
 }
 
-.highlight-link { color: var(--accent-orange) !important; font-weight: 600 !important;}
+.highlight-link { color: var(--accent-orange) !important; font-weight: 600 !important; }
 
-.container{
+/* Main Container */
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -87,7 +93,7 @@ body {
 
 .hero-content h2 {
     font-size: 2rem;
-    font-weight: 500; 
+    font-weight: 500;
     color: #4a6fa5;
     margin-bottom: 15px;
 }
@@ -98,25 +104,25 @@ body {
     margin-bottom: 30px;
 }
 
-.button-group{
+.button-group {
     display: flex;
+    flex-direction: column;
     gap: 15px;
     max-width: 350px;
-    flex-direction: column;
 }
 
-.primary-btn , .secondary-btn{
+.primary-btn, .secondary-btn {
     padding: 15px 25px;
+    border-radius: 50px; /* Pill shape */
     border: none;
-    border-radius: 50px;
-    font-size: 1rem;
     font-weight: 700;
-    text-align: center;
+    font-size: 1rem;
     cursor: pointer;
+    text-align: center;
     transition: transform 0.2s;
 }
 
-.primart-btn {
+.primary-btn {
     background-color: var(--primary-green);
     color: white;
     box-shadow: 0 4px 15px rgba(130, 197, 156, 0.4);
@@ -132,30 +138,31 @@ body {
     transform: translateY(-2px);
 }
 
-.herovisual {
+/* Hero Visual (Recreating the illustration feel) */
+.hero-visual {
     flex: 1;
     position: relative;
     height: 400px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.floatinguicard{
+.floating-ui-card {
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
     background: white;
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border: 2px solid #e0f2e9;
     z-index: 10;
     font-size: 0.85rem;
     min-width: 250px;
 }
 
-.uirow {
+.ui-row {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -164,40 +171,28 @@ body {
     border-bottom: 1px solid #f0f0f0;
 }
 
-.uirow div {
-    display: flex;
-    flex-direction: column;
-}
-.fssairow {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    font-style: italic;
-}
+.ui-row div { display: flex; flex-direction: column; }
+.fssai-row { border-bottom: none; margin-bottom: 0; padding-bottom: 0; font-style: italic; }
 
-.scanningillustration{
+.scanning-illustration {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.chipbag {
-    font-size: 5rem; transform: rotate(-15deg);
-}
-.phonescanner {
-    width: 120px;
-    height: 180px;
+.chip-bag { font-size: 5rem; transform: rotate(-15deg); }
+.phone-scanner {
+    width: 100px; height: 180px;
     background: #333;
-    border: 4px solid #555;
     border-radius: 15px;
+    border: 4px solid #555;
     position: relative;
     overflow: hidden;
     transform: rotate(10deg);
 }
 
-.scanline {
-    width: 100%;
-    height: 2px;
+.scan-line {
+    width: 100%; height: 2px;
     background: #00ff00;
     position: absolute;
     top: 0;
@@ -205,37 +200,41 @@ body {
     animation: scan 2s infinite alternate;
 }
 
-@keyframes scan {
-    to{ top: 100%; }
-}
+@keyframes scan { to { top: 100%; } }
 
-.stepsection {
+/* Steps Section */
+.steps-section {
+    display: flex;
+    gap: 20px;
     background: white;
     padding: 20px;
-    gap: 20px;
-    display: flex;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     margin-bottom: 50px;
 }
 
-.stepcard {
+.step-card {
     flex: 1;
     text-align: center;
     padding: 20px;
-    border-radius: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
 }
+.step-card:last-child { border-right: none; }
+.step-icon { font-size: 2.5rem; color: var(--primary-green); margin-bottom: 10px; }
+.step-card h4 { font-size: 1.1rem; margin-bottom: 5px; }
+.step-card p { font-size: 0.85rem; color: #666; }
 
-.chemistrysection { margin-bottom: 60px; }
-.chemistrysection h3 { text-align: center; margin-bottom: 20px; font-size: 1.2rem; }
+/* Chemistry Section */
+.chemistry-section { margin-bottom: 60px; }
+.chemistry-section h3 { text-align: center; margin-bottom: 20px; font-size: 1.2rem; }
 
-.chemistrygrid {
+.chemistry-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.chemcard {
+.chem-card {
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -245,13 +244,14 @@ body {
     max-width: 300px;
 }
 
-.chemcard h4 { font-size: 0.95rem; margin-bottom: 15px; }
-.graphplaceholder { font-size: 2rem; color: #555; }
-.graphplaceholder small { font-size: 0.7rem; color: #888; display: block; margin-top: 5px; }
-.flexicons { display: flex; justify-content: space-around; align-items: center; }
+.chem-card h4 { font-size: 0.95rem; margin-bottom: 15px; }
+.graph-placeholder { font-size: 2rem; color: #555; }
+.graph-placeholder small { font-size: 0.7rem; color: #888; display: block; margin-top: 5px; }
+.flex-icons { display: flex; justify-content: space-around; align-items: center; }
 .vs { font-size: 1rem; font-weight: bold; color: #ccc; }
 
-.missionsection {
+/* Mission & Stats Section */
+.mission-section {
     display: flex;
     gap: 40px;
     align-items: center;
@@ -267,7 +267,7 @@ body {
 .counter h3 { font-size: 1.8rem; }
 .counter p { font-size: 0.85rem; font-weight: 600; color: #666; }
 
-.missionbox {
+.mission-box {
     flex: 2;
     background: #e6f4ea;
     border-radius: 20px;
@@ -277,7 +277,7 @@ body {
     gap: 30px;
 }
 
-.mapplaceholder {
+.map-placeholder {
     font-size: 5rem;
     position: relative;
     background: white;
@@ -286,10 +286,10 @@ body {
 }
 .pin { position: absolute; font-size: 1rem; bottom: 10px; left: 50%; transform: translateX(-50%); font-weight: bold;}
 
-.missiontext h3 { font-size: 1.1rem; margin-bottom: 10px; }
-.missiontext p { font-size: 0.9rem; margin-bottom: 15px; color: #444; }
+.mission-text h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.mission-text p { font-size: 0.9rem; margin-bottom: 15px; color: #444; }
 
-.donatebtn {
+.donate-btn {
     background-color: var(--accent-orange);
     color: white;
     border: none;
@@ -299,6 +299,7 @@ body {
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
