@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — DecodeFood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .about-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            max-width: 680px;
+            margin: 0 auto 80px;
+        }
+        .about-hero .eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            background: rgba(52,199,89,0.1);
+            padding: 6px 14px;
+            border-radius: 980px;
+            margin-bottom: 20px;
+        }
+        .about-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .about-hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+
+        .mission-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+        .mission-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+        .mission-text p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .mission-visual {
+            background: var(--card-bg);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-float);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .stat-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            color: var(--primary-green);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .stat-divider {
+            height: 1px;
+            background: var(--secondary-gray);
+        }
+
+        .how-it-works {
+            margin-bottom: 80px;
+        }
+        .how-it-works h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary-gray);
+            z-index: 0;
+        }
+        .timeline-step {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 0 0 36px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-step:last-child { padding-bottom: 0; }
+        .step-dot {
+            width: 58px;
+            height: 58px;
+            min-width: 58px;
+            background: var(--card-bg);
+            border: 2px solid var(--secondary-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: var(--shadow-subtle);
+        }
+        .step-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            padding-top: 14px;
+        }
+        .step-body p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
