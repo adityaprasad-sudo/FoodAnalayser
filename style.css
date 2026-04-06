@@ -7,7 +7,7 @@
     --primary-green-hover: #32b353;
     --secondary-gray: #e8e8ed;
     --accent-orange: #ff9500;
-    
+    --stupid-pink: #ff002b;
     --glass-bg: rgba(255, 255, 255, 0.75);
     --glass-border: 1px solid rgba(255, 255, 255, 0.5);
     --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.04);
@@ -60,7 +60,28 @@ body {
 .navportal a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.85rem; transition: 0.2s; opacity: 0.8; }
 .navportal a:hover { opacity: 1; }
 .highlight-link { color: var(--accent-orange) !important; font-weight: 600 !important; opacity: 1 !important; }
-
+.bgeffects {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+.gloworb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.5;
+    animation: orbFloat 5s ease-in-out infinite alternate;
+}
+.orbgreen { width: 400px; height: 400px; background: var(--primary-green);  top: 100px; left:500px;}
+.orbpink { width: 700px; height: 800px; background: var(--stupid-pink); animation-duration: 12s; top: 100px; left:300px;}
+.orborange { width: 350px; height: 350px; background: var(--accent-orange); animation-duration: 12s; }
+@keyframes orbFloat {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    100% { transform: translate(30px, 40px) scale(1.4); opacity: 0.5; }
+}
 /*mobile menu thingy because da destop one glitches in mobile */
 .nav-toggle {
     display: none;
