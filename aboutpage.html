@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — DecodeFood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .abouther {
+            text-align: center;
+            padding: 80px 20px 60px;
+            max-width: 680px;
+            margin: 0 auto 80px;
+        }
+        .abouther .eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            background: rgba(52,199,89,0.1);
+            padding: 6px 14px;
+            border-radius: 980px;
+            margin-bottom: 20px;
+        }
+        .abouther h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .abouther p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+
+        .missionstuff {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+        .missiontxt h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+        .missiontxt p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .missionvi {
+            background: var(--card-bg);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-float);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .stats {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .statsno {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            color: var(--primary-green);
+            line-height: 1;
+        }
+        .statslabel {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .statsdivi {
+            height: 1px;
+            background: var(--secondary-gray);
+        }
+
+        .hit {
+            margin-bottom: 80px;
+        }
+        .hit h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary-gray);
+            z-index: 0;
+        }
+        .timestep {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 0 0 36px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .timestep:last-child { padding-bottom: 0; }
+        .stepdot {
+            width: 58px;
+            height: 58px;
+            min-width: 58px;
+            background: var(--card-bg);
+            border: 2px solid var(--secondary-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: var(--shadow-subtle);
+        }
+        .stepcorpse h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            padding-top: 14px;
+        }
+        .stepcorpse p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .teamsection {
+            margin-bottom: 80px;
+        }
+        .teamsection h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .gridteam {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .cardteam {
+            background: var(--card-bg);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-subtle);
+            padding: 30px 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .cardteam:hover { transform: translateY(-4px); }
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--secondary-gray);
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .cardteam h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .cardteam .role {
+            font-size: 0.82rem;
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .cardteam p {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .teamsec {
+            margin-bottom: 80px;
+        }
+        .teamsec h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .gridtech {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .techcard {
+            background: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: var(--shadow-subtle);
+            padding: 20px 22px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: transform 0.3s ease;
+        }
+        .techcard:hover { transform: translateY(-3px); }
+        .tech-icon {
+            font-size: 1.6rem;
+            min-width: 36px;
+        }
+        .techcard h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .techcard p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .banner {
+            background: var(--text-dark);
+            border-radius: var(--radius-card);
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 260px; height: 260px;
+            background: radial-gradient(circle, rgba(52,199,89,0.25), transparent 70%);
+            border-radius: 50%;
+        }
+        .banner h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        .banner p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+            margin-bottom: 28px;
+        }
+        .banner .primary-btn {
+            display: inline-block;
+            text-decoration: none;
+            width: auto;
+            padding: 16px 36px;
+        }
+
+        @media (max-width: 768px) {
+            .abouther h1 { font-size: 2.2rem; }
+            .missionstuff {
+                grid-template-columns: 1fr;
+            }
+            .banner { padding: 40px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="navthings">
+        <a href="index.html" class="logo" style="text-decoration:none;">Decode<span>Food</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navportal" id="navLinks">
+            <li><a href="about.html" style="color:var(--primary-green);">About</a></li>
+            <li><a href="#">Database</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#" class="highlight-link">Support Me(Donate)</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container">
+
+
+    <div class="abouther fade-in-up">
+        <span class="eyebrow">Our Story</span>
+        <h1>We believe you deserve to know what's in your food.</h1>
+        <p>DecodeFood was born from a simple frustration — food labels are intentionally hard to read. We're changing that.</p>
+    </div>
+
+
+    <section class="missionstuff">
+        <div class="missiontxt fade-in-up" style="transition-delay:0.1s;">
+            <h2>Our Mission</h2>
+            <p>
+
+                We combine barcode scanning, AI analysis, and open food databases to give every person — regardless of their chemistry background — a clear, honest breakdown of what they're eating.
+            </p>
+            <p>
+
+                No jargon. No fearmongering. Just facts, context, and actionable insights.
+            </p>
+        </div>
+        <div class="missionvi fade-in-up" style="transition-delay:0.2s;">
+
+            <div class="stats">
+                <span class="statsno">3M+</span>
+                <span class="statslabel">food products in database</span>
+            </div>
+            <div class="statsdivi"></div>
+            <div class="stats">
+                <span class="statsno">Food transparency</span>
+                <span class="statslabel">know everything about your food haha now try to scam us you big companies :) </span>
+            </div>
+            <div class="statsdivi"></div>
+            <div class="stats">
+                <span class="statsno">100%</span>
+                <span class="statslabel">free, no account needed</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hit">
+        <h2 class="fade-in-up">How It Works</h2>
+        <div class="timeline">
+            <div class="timestep fade-in-up" style="transition-delay:0.1s;">
+                <div class="stepdot">📷</div>
+                <div class="stepcorpse">
+                    <h4>Scan or Upload</h4>
+                    <p>Point your camera at any barcode or upload a photo of the ingredients label. NOTE: not all food products are in the database.</p>
+                </div>
+            </div>
+            <div class="timestep fade-in-up" style="transition-delay:0.2s;">
+                <div class="stepdot">🔍</div>
+                <div class="stepcorpse">
+                    <h4>Database Lookup</h4>
+                    <p>We query Open Food Facts — a crowd-sourced database of 3M+ products — for ingredients data.</p>
+                </div>
+            </div>
+            <div class="timestep fade-in-up" style="transition-delay:0.3s;">
+                <div class="stepdot">🧠</div>
+                <div class="stepcorpse">
+                    <h4>AI Analysis</h4>
+                    <p>Gemini AI reads the ingredient list and produces a plain-English health verdict with a score, concerns(including allergens), and potential benefits.</p>
+                </div>
+            </div>
+            <div class="timestep fade-in-up" style="transition-delay:0.4s;">
+                <div class="stepdot">✅</div>
+                <div class="stepcorpse">
+                    <h4>You Decide</h4>
+                    <p>Armed with clear information, you make an informed choice about what goes in your body.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="teamsection">
+        <h2 class="fade-in-up">The Team</h2>
+        <div class="gridteam">
+
+            <div class="cardteam fade-in-up" style="transition-delay:0.1s;">
+                <div class="avatar">👨‍💻</div>
+                <h4>Aditya Prasad</h4>
+                <p class="role">Founder & Developer</p>
+                <p>Small project to improve food transparency.</p>
+            </div>
+            <div class="cardteam fade-in-up" style="transition-delay:0.2s;">
+                <div class="avatar">🧪</div>
+                <h4>OpenFoodFacts.org</h4>
+                <p class="role">Item Database</p>
+                <p>Using world.openfoodfacts.org to fetch ingredient data from barcodes</p>
+            </div>
+            <div class="cardteam fade-in-up" style="transition-delay:0.3s;">
+                <div class="avatar">🎨</div>
+                <h4>Same as the founder</h4>
+                <p class="role">Design & UX</p>
+                <p>Css is easy but looking at the documentation is a real pain ;) </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="teamsec">
+        <h2 class="fade-in-up">Built With</h2>
+        <div class="gridtech">
+            <div class="techcard fade-in-up" style="transition-delay:0.1s;">
+                <div class="tech-icon">🤖</div>
+                <div>
+                    <h5>Gemini AI and Nemotron nano 12b(as an backup) </h5>
+                    <p>Ingredient analysis & health scoring</p>
+                </div>
+            </div>
+            <div class="techcard fade-in-up" style="transition-delay:0.15s;">
+                <div class="tech-icon">🥫</div>
+                <div>
+                    <h5>Open Food Facts</h5>
+                    <p>3M+ product barcode database</p>
+                </div>
+            </div>
+            <div class="techcard fade-in-up" style="transition-delay:0.2s;">
+                <div class="tech-icon">📷</div>
+                <div>
+                    <h5>Html5-QRCode</h5>
+                    <p>In-browser barcode scanning</p>
+                </div>
+            </div>
+            <div class="techcard fade-in-up" style="transition-delay:0.25s;">
+                <div class="tech-icon">🚀</div>
+                <div>
+                    <h5>Hugging Faces</h5>
+                    <p>Backend API hosting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <div class="banner fade-in-up">
+        <h2>Ready to decode your food?</h2>
+        <p>It's free, instant, and requires no account.</p>
+        <a href="index.html" class="primary-btn">Start Scanning →</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>Built with ❤️ for a healthier future • <a href="https://github.com/adityaprasad-sudo/FoodAnalayser">View Source</a></p>
+</footer>
+<script>
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+ 
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
