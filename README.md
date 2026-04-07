@@ -103,7 +103,15 @@ Built with ❤️ by **Aditya Prasad** * GitHub: [@adityaprasad-sudo](https://gi
 
 Here's the link to the Backend files [Hugging Face](https://huggingface.co/spaces/AmbitiousPotato/Backendforfooddecoder/tree/main)
 
+## Dependencies
 
+-fastapi
+-uvicorn
+-python-multipart
+-Pillow
+-google-generativeai
+-requests
+-python-dotenv
 
 ## Flowchart
 
