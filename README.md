@@ -99,7 +99,7 @@ _DecodeFood is built for educational and informational purposes only. The AI-gen
 
 Built with ❤️ by **Aditya Prasad** * GitHub: [@adityaprasad-sudo](https://github.com/adityaprasad-sudo)
 
-##Backend
+## Backend
 
 Here's the link to the Backend files [Hugging Face](https://huggingface.co/spaces/AmbitiousPotato/Backendforfooddecoder/tree/main)
 
