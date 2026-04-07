@@ -25,6 +25,29 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
+    height: 100vh;
+    margin: 0;
+}
+
+#blob {
+    height: 250px;
+    aspect-ratio: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: linear-gradient(to right, #00ffcc, #7000ff);
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+    filter: blur(80px);
+}
+@keyframes rotate {
+    from {rotate: 0deg;}
+    50% {scale: 1 1.5;}
+    to {rotate: 360deg;}
 }
 
 .navbar {
@@ -128,8 +151,8 @@ body {
     display: block;
     width: 100%;
 }
-.primary-btn { background-color: var(--primary-green); color: white; }
-.secondary-btn { background-color: var(--secondary-gray); color: var(--text-dark); }
+.primary-btn { background-color: var(--primary-green); color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2);}
+.secondary-btn { background-color: var(--secondary-gray); color: var(--text-dark); box-shadow: 0 4px 10px rgba(0,0,0,0.2);}
 .primary-btn:hover { background-color: var(--primary-green-hover); transform: scale(1.02); }
 .secondary-btn:hover { background-color: #dfdfe4; transform: scale(1.02); }
 
