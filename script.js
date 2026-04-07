@@ -1,24 +1,20 @@
-
-
-
-
-
-//NOTE: This Javascript is written with the help of claude because i am not really good in 
+    //NOTE: This Javascript is written with the help of claude because i am not really good in 
     // javascript so to fix bugs and make it seamless and easy to understand claude has been 
     // used PLease dont cuss me if something is off.
-
-
-
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const BACKEND_IMAGE_API = "https://ambitiouspotato-backendforfooddecoder.hf.space/analyze";
     const BACKEND_TEXT_API  = "https://ambitiouspotato-backendforfooddecoder.hf.space/analyze_text";
     const DUMMY_API_KEY     = "shiggaapi";
+    const blob = document.getElementById('blob');
+    document.addEventListener('mousemove', (e) => {
+        const {clientX: x, clientY: y} = e;
+        blob.animate({
+            left: `${x}px`,
+            top: `${y}px`
+        }, { duration: 3000, fill: "forwards" });
+    });
 
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
