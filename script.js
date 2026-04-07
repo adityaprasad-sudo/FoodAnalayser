@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const BACKEND_IMAGE_API = "https://ambitiouspotato-backendforfooddecoder.hf.space/analyze";
     const BACKEND_TEXT_API  = "https://ambitiouspotato-backendforfooddecoder.hf.space/analyze_text";
     const DUMMY_API_KEY     = "shiggaapi";
+
+
     const blob = document.getElementById('blob');
     document.addEventListener('mousemove', (e) => {
         const {clientX: x, clientY: y} = e;
@@ -30,6 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.15 });
     document.querySelectorAll('.fade-in-up').forEach(el => scrollObserver.observe(el));
+    const tiltCont = document.getElementById('tiltcont');
+    const tiltstack = document.getElementById('tiltstack');
+    tiltCont.addEventListener('mousemove', (e) => {
+            const rect = tiltCont.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            const rotateX = (y / rect.height) * -15; 
+            const rotateY = (x / rect.width) * 15;  
+            
+            tiltstack.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        tiltCont.addEventListener('mouseleave', () => {
+            tiltstack.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            tiltstack.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+
+        tiltCont.addEventListener('mouseenter', () => {
+            tiltstack.style.transition = 'transform 0.1s ease-out';
+        });
 
     document.querySelectorAll('.interactive-card').forEach(card => {
         const glare = card.querySelector('.glare');
