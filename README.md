@@ -90,7 +90,6 @@ You can delete the current file by clicking the **Remove** button in the file ex
 
 You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
 
-
 # Disclaimer
 
 _DecodeFood is built for educational and informational purposes only. The AI-generated health scores and insights do not constitute professional medical advice. Users with severe food allergies should always verify ingredients on the physical packaging._
