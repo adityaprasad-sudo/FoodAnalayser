@@ -63,14 +63,14 @@ Idk why would anyone install it locally but here are the steps to do so:-
 - make .env file in the cloned repo
 -
 
-    this goes into your .env file and put your gemini api key in the chiggaapi and openrouter api key in the opapikey
-    chiggaapi=YOUR_GEMINI_API_KEY
-    opapikey=YOUR_OPENROUTER_API_KEY
+    this goes into your .env file and put your open ai api keys(but since i am using hackclub api's the client url would be hackclub so make sure you change that to your needs)
+    `OPENAI_API_KEY = "Your api key"`
+    
 
 3.Install dependencies
 
-        pip install fastapi uvicorn google-generativeai pillow requests python-dotenv python-multipart
-    uvicorn main:app --reload --port 7860
+        pip install fastapi uvicorn openai pillow requests python-dotenv python-multipart
+    uvicorn 
 4.Runing the frontend
 
 - You can serve the HTML/CSS/JS files using any standard live server (like the VS Code Live Server extension)
