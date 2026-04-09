@@ -8,9 +8,9 @@
 
 -   **Live Barcode Scanning:** Native in-browser scanning using device cameras (no app download required).
     
--   **Vision AI Fallback:** Upload a photo of a food label if the barcode isn't recognized, utilizing Vision LLMs to extract ingredient text automatically.
+-   **Vision AI Fallback:** Upload a photo of a food label if the barcode isn't recognized, utilizing Vision LLMs to extract ingredient text automatically. **(This uses Nvidia nemotron nano 12b v2 vl)**
     
--   **AI Health Analysis:**  Automatically generates a "*Health Score*" (1-10), *highlights positive nutritional traits*, and flags potential concerns (like hidden sugars, artificial additives, emulsifiers, food dyes etc.).
+-   **AI Health Analysis:**  Automatically generates a **Health Score** , **highlights positive nutritional traits**, and flags potential concerns (like hidden sugars, artificial additives, emulsifiers, food dyes etc.).
     
 -   **User Friendly UI:** A premium, responsive frontend featuring glassmorphism, 3D interactive cards, magnetic buttons, and smooth momentum scrolling.
     
@@ -29,7 +29,7 @@
 
 **Backend & AI**
 
--   **Python Framework:** FastAPI
+-   **Python Framework:** Fastapi
     
 -   **Hosting:** Hugging Face Spaces
     
@@ -78,17 +78,7 @@ Idk why would anyone install it locally but here are the steps to do so:-
 - You can serve the HTML/CSS/JS files using any standard live server (like the VS Code Live Server extension)
 
 Note: Camera access in browsers requires either a `localhost` or `https://` connection
-  
 
-
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
 
 # Disclaimer
 
@@ -98,21 +88,26 @@ _DecodeFood is built for educational and informational purposes only. The AI-gen
 
 Built with ❤️ by **Aditya Prasad** * GitHub: [@adityaprasad-sudo](https://github.com/adityaprasad-sudo)
 
-## Backend
 
-Here's the link to the Backend files [Hugging Face](https://huggingface.co/spaces/AmbitiousPotato/Backendforfooddecoder/tree/main)
-
-## Dependencies
-
--fastapi
--uvicorn
--python-multipart
--Pillow
--google-generativeai
--requests
--python-dotenv
 
 ## Flowchart
 
-![flowchart](https://github.com/adityaprasad-sudo/FoodDecoder/blob/main/flowchart/Product%20Purchase%20Decision-2026-04-06-145301.png?raw=true)
+![flowchart](https://i.ibb.co/k2CP7xGg/Product-Purchase-Decision-2026-04-06-145301.png)
 
+## Screenshots and Demo
+item used in the video - [Amazon](https://www.amazon.in/Kissan-Mixed-Fruit-Jam-700g/dp/B00N2WRE52/ref=sr_1_6?sr=8-6)
+
+- Demo Video
+
+(https://drive.google.com/file/d/1url-S7SR59TI-1AMfo4ylVShVGI_h3xj/view?usp=sharing)
+
+- Demo Screenshots
+
+<img width="484" height="1023" alt="Screenshot 2026-04-09 173820" src="https://github.com/user-attachments/assets/def03436-af1e-448d-9e10-8188df2b74d6" />
+<img width="483" height="1023" alt="Screenshot 2026-04-09 173918" src="https://github.com/user-attachments/assets/150becff-ffd8-4d80-90c6-8eaf5dd8f8af" />
+
+
+## Which Barcode to Scan?
+<img width="683" height="696" alt="Screenshot 2026-04-09 174020" src="https://github.com/user-attachments/assets/a9fabb9c-4cef-4848-a16d-b60af2acc042" />
+
+    
