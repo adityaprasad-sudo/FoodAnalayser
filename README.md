@@ -41,8 +41,6 @@
 
 ## How does it work??
 
-## How It Works
-
 1.  **Scan or Upload:** If the database contains the product scanning the barcode(usually behind the food package) can give instant insights but if you want deeper analysis or the product is not in the database you can take a photo of the backside of the product which will give a more detailed insight.
     
 2.  **Database Lookup:** If a barcode is scanned, the app pings the Open Food Facts API to retrieve the raw ingredient string.
