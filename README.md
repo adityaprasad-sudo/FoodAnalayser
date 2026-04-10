@@ -90,7 +90,7 @@ Built with ❤️ by **Aditya Prasad** * GitHub: [@adityaprasad-sudo](https://gi
 
 ## Flowchart
 
-![flowchart](https://i.ibb.co/k2CP7xGg/Product-Purchase-Decision-2026-04-06-145301.png)
+![flowchart](https://github.com/adityaprasad-sudo/FoodDecoder/blob/main/flowchart%2FProduct%20Purchase%20Decision-2026-04-06-145301.png)
 
 ## Screenshots and Demo
 item used in the video - [Amazon](https://www.amazon.in/Kissan-Mixed-Fruit-Jam-700g/dp/B00N2WRE52/ref=sr_1_6?sr=8-6)
